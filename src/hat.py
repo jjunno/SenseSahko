@@ -80,7 +80,7 @@ class Hat:
 
     def display_price(self, value):
         print('Current price:', str(value))
-        valStr = str(value)
+        valStr = str(round(value, 2))
         self.sense.show_message(
             valStr, text_colour=self.price_color(value), scroll_speed=HAT_PRICE_SCROLL_SPEED)
 
