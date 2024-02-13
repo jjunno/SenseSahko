@@ -46,12 +46,6 @@ class Hat:
             print('Joystick pressed', event.direction)
             if event.direction == 'middle':
                 print('Middle button')
-                # self.at_hour = self.current_hour()
-                # self.display_prefix("Avg")
-                # self.display_price(self.price.avg)
-
-                # self.display_current_hour()
-                # self.display_price(self.price.hour[self.at_hour])
             if event.direction == 'up':
                 self.display_prefix("Max")
                 self.display_price(self.price.max)
