@@ -27,7 +27,7 @@ def main():
 
     if USE_HAT:
         s = hat.Hat(p)
-    input('Press enter to exit')
+    input('Press enter to exit \n')
 
 
 if __name__ == "__main__":
