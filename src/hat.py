@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from sense_hat import SenseHat
 from datetime import datetime
+import time
 
 load_dotenv()
 
@@ -36,7 +37,7 @@ class Hat:
         self.sense.low_light = HAT_LOW_LIGHT
         self.sense.stick.direction_any = self.joystick_action
 
-        self.display_prefix("INIT")
+        self.display_init()
 
     def joystick_action(self, event):
         self.sense.clear()
@@ -84,6 +85,10 @@ class Hat:
         self.sense.show_message(
             prefix, text_colour=color['white'], scroll_speed=HAT_PREFIX_SCROLL_SPEED)
 
+    def display_init(self):
+        self.sense.show_message(
+            'INIT', text_colour=color['white'], scroll_speed=HAT_PREFIX_SCROLL_SPEED)
+
     def display_price(self, value):
         print('Current price:', str(value))
         valStr = str(round(value, 2))
@@ -97,3 +102,7 @@ class Hat:
             return color['yellow']
         else:
             return color['red']
+
+    def display_scheduled_message(self):
+        self.display_current_hour()
+        self.display_price(self.price.hour[self.at_hour])
