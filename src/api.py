@@ -10,6 +10,7 @@ class Api:
     self.url = os.getenv('API_URL')
     self.json = {}
 
+  # Get data from API and store it in self.json
   def fetch(self):
     print('Fetching data from API')
     try:
