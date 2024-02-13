@@ -11,3 +11,5 @@ pip install -r requirements.txt
 # env
 
 API_URL=foobar
+USE_HAT=False
+HAT_ROTATION=180
