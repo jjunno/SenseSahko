@@ -10,4 +10,4 @@ class Price:
         self.min = json['min']
         self.max = json['max']
         self.avg = json['avg']
-        self.hours = json['hour']
+        self.hour = json['hour']

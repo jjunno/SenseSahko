@@ -11,7 +11,7 @@ USE_HAT = True if os.getenv('USE_HAT') == 'True' else False
 
 def main():
     if USE_HAT:
-        s = hat.Hat()
+        print('Use hat')
     else:
         print('No hat')
 
@@ -22,8 +22,12 @@ def main():
     print('Min:', p.min)
     print('Max:', p.max)
     print('Avg:', p.avg)
-    for h in p.hours:
-        print(h)
+    # for h in p.hour:
+    #     print(h)
+
+    if USE_HAT:
+        s = hat.Hat(p)
+    input('Press enter to exit')
 
 
 if __name__ == "__main__":
