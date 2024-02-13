@@ -19,3 +19,7 @@ HAT_PRICE_SCROLL_SPEED=0.1
 
 PRICE_NICE=5.0
 PRICE_OK=10.0
+
+# Issues with rtimu?
+
+https://github.com/astro-pi/python-sense-hat/issues/58#issuecomment-374414765
