@@ -19,6 +19,7 @@ HAT_PRICE_SCROLL_SPEED=0.1
 
 PRICE_NICE=5.0
 PRICE_OK=10.0
+VAT=0.24
 
 # Issues with rtimu?
 
