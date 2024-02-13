@@ -4,14 +4,24 @@ Display current Finnish electricity spot price using SenseHat joystick or by sch
 Quickly developed and tested on Raspberry Pi 5 8Gb. I was sick, had a sick leave and needed something fast and stupid to do.
 
 # Quick start
+```
+touch .env
 
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
+```
 
 (You might run in to some issues SenseHat (or related) libraries when running it in venv. https://github.com/astro-pi/python-sense-hat/issues/58#issuecomment-374414765)
 
-# env
+# Usage
+python3 src/main.py, once you see INIT text use joystick to get min or max prices, or ascend or descend hourly.
+
+You can also use cron to schedule src/scheduled.py to display price at current hour.
+
+# .env
 
 API_URL=https://tehopirtti.net/finnish_electricity_spot_price.json
 USE_HAT=True
