@@ -1,2 +1,13 @@
 # SenseSahko
- Raspberry Pi (5) SenseHat pörssisähkökikkare
+
+Raspberry Pi (5) SenseHat pörssisähkökikkare
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+# env
+
+API_URL=foobar
