@@ -6,11 +6,11 @@ load_dotenv()
 
 class Price:
     def __init__(self, json):
-        self.date = json['date']
-        self.min = json['min']
-        self.max = json['max']
-        self.avg = json['avg']
-        self.hour = json['hour']
+        self.date = json['data'][0]['date']
+        self.min = json['data'][0]['min']
+        self.max = json['data'][0]['max']
+        self.avg = json['data'][0]['avg']
+        self.hour = json['data'][0]['hour']
         self.vat = float(os.getenv('VAT', 0.24))
         self.add_vats()
 
